@@ -144,4 +144,7 @@
     .footer-download-qr {
         display: none;
     }
+    .footer-download-app {
+        margin-left: 0;
+    }
 }

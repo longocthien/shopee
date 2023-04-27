@@ -1320,8 +1320,8 @@ border-color: red green blue yellow */
 }
 
 .footer-download-qr {
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
@@ -1332,6 +1332,7 @@ border-color: red green blue yellow */
     flex-direction: column;
     justify-content: center;
     margin-left: 16px;
+    gap: 2px;
 }
 
 .footer-download-app-img {
