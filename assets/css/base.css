@@ -161,6 +161,7 @@ html {
     min-width: 40px;
     border-radius: 3px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .pagination-item.pagination-item--active {
