@@ -139,11 +139,13 @@ html {
 
 .pagination-item {
     padding: 0 15px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .pagination-item--active .pagination-item-link {
     background-color: var(--primary-color);
     color: var(--white-color);
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* .pagination-item .pagination-item-link:hover {
@@ -166,6 +168,7 @@ html {
 
 .pagination-item.pagination-item--active {
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .pagination-item.pagination-item--active:hover {
@@ -175,4 +178,5 @@ html {
 .pagination-item .pagination-item-link--disable:hover {
     cursor: default;
     box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
 }
