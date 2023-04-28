@@ -50,6 +50,11 @@
     .home-product-item__price-new {
         font-size: 1.2rem;
     }
+    .other-footer-link {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
 }
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {

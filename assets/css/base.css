@@ -146,9 +146,9 @@ html {
     color: var(--white-color);
 }
 
-.pagination-item .pagination-item-link:hover {
+/* .pagination-item .pagination-item-link:hover {
     box-shadow: 0 0 3px #333;
-}
+} */
 
 .pagination-item-link {
     display: block;
@@ -160,6 +160,15 @@ html {
     line-height: 30px;
     min-width: 40px;
     border-radius: 3px;
+    cursor: pointer;
+}
+
+.pagination-item.pagination-item--active {
+    cursor: pointer;
+}
+
+.pagination-item.pagination-item--active:hover {
+    opacity: 0.9;
 }
 
 .pagination-item .pagination-item-link--disable:hover {
