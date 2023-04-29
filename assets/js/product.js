@@ -285,33 +285,64 @@ function handlePagination() {
     }
 }
 
-// catagory
+// category
 
-var headerCatagoryItem = document.querySelectorAll('.header__sort-item');
+var headerCategoryItem = document.querySelectorAll('.header__sort-item');
 
 for (var i = 0; i < 4; i++) {
-    headerCatagoryItem[i].onclick = function () {
-        var headerCatagoryActive = document.querySelector(
+    headerCategoryItem[i].onclick = function () {
+        var headerCategoryActive = document.querySelector(
             '.header__sort-item--active'
         );
-        headerCatagoryActive.classList.remove('header__sort-item--active');
+        headerCategoryActive.classList.remove('header__sort-item--active');
         this.classList.add('header__sort-item--active');
         shuffer();
     };
 }
 
-var mobileCatagoryItem = document.querySelectorAll('.mobile-category-item');
+// filter items by category
 
-for (var i = 0; i < mobileCatagoryItem.length; i++) {
-    mobileCatagoryItem[i].onclick = function () {
+var mobileCategoryItem = document.querySelectorAll('.category-group-item');
+
+mobileCategoryItem.forEach(function (itemClicked) {
+    itemClicked.onclick = function (e) {
+        var input = e.target.querySelector('input');
+
+        if (input.checked) {
+            input.checked = false;
+            isChecked = false;
+        } else {
+            input.checked = true;
+            isChecked = true;
+        }
         shuffer();
     };
-}
+});
 
+// filter items by star rating
+
+var ratingStar = document.querySelectorAll('.star-checked, .star-uncheck');
+
+ratingStar.forEach(function (itemClicked) {
+    itemClicked.onclick = function (e) {
+        var parentElement = e.target.parentNode;
+        var input = parentElement.querySelector('input');
+        if (input.checked) {
+            input.checked = false;
+            isChecked = false;
+        } else {
+            input.checked = true;
+            isChecked = true;
+        }
+        shuffer();
+    };
+});
+
+// filter theo thứ tự sắp xếp
 var homeFilter = document.querySelectorAll('.home-filter-btn');
 
-for (var i = 0; i < 3; i++) {
-    homeFilter[i].onclick = function () {
+homeFilter.forEach(function (itemClicked) {
+    itemClicked.onclick = function () {
         var homeFilterActive = document.querySelector(
             '.home-filter-btn.btn--primary'
         );
@@ -319,16 +350,34 @@ for (var i = 0; i < 3; i++) {
         this.classList.add('btn--primary');
         shuffer();
     };
-}
+});
 
+// Tải lại trang
+var refreshButton = document.querySelectorAll('.category-group-filter-btn');
+refreshButton.forEach(function (itemClicked) {
+    itemClicked.onclick = function () {
+        location.reload();
+    };
+});
+
+// filter theo tăng giá, giảm giá
+var priceBtn = document.querySelector('.home-filter-sort-btn');
 var homeFilterSort = document.querySelectorAll('.home-filter-sort-item-link');
-
-for (var i = 0; i < 2; i++) {
-    homeFilterSort[i].onclick = function () {
+homeFilterSort.forEach(function (itemClicked) {
+    itemClicked.onclick = function (e) {
+        console.log(e.target.textContent);
+        priceBtn.innerText = e.target.textContent;
+        priceBtn.style.color = 'var(--primary-color)';
         shuffer();
     };
-}
+});
+// for (var i = 0; i < 2; i++) {
+//     homeFilterSort[i].onclick = function () {
+//         shuffer();
+//     };
+// }
 
+// chuyển trang
 var homeFilterPage = document.querySelectorAll('.home-filter-page-btn');
 
 homeFilterPage[0].onclick = function () {
@@ -344,6 +393,7 @@ homeFilterPage[0].onclick = function () {
         homeFilterPage[0].classList.add('home-filter-page-btn--disable');
     }
 };
+
 homeFilterPage[1].onclick = function () {
     var currentPage = document.querySelector('.home-filter-page-now');
     if (currentPage.textContent != 14) {
