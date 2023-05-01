@@ -3,7 +3,6 @@ const dataUrl = 'https://cdn.crfnetwork.cyou/database/shopee.json';
 fetch(dataUrl)
     .then((response) => response.json())
     .then(renderItem)
-    .then(responsive)
     .then(handlePagination);
 
 function shuffer() {
@@ -14,7 +13,6 @@ function shuffer() {
             return list;
         })
         .then(renderItem)
-        .then(responsive)
         .then(handlePagination);
 }
 
@@ -64,32 +62,9 @@ function renderItem(items) {
     listProduct.innerHTML = htmls.join('');
 }
 
-function responsive() {
-    var listItem = document.querySelectorAll('.home-product-item');
-    var bodyWidth = document.body.clientWidth;
-    var listItemLength = listItem.length;
-
-    if (bodyWidth < 740) {
-        for (
-            var i = listItemLength - 1;
-            i >= Math.floor(listItemLength / 2) * 2;
-            i--
-        ) {
-            listItem[i].remove();
-        }
-    } else if (bodyWidth < 1024) {
-        for (
-            var i = listItemLength - 1;
-            i >= Math.floor(listItemLength / 4) * 4;
-            i--
-        ) {
-            listItem[i].remove();
-        }
-    }
-}
-
 function checkPageArrow() {
     var paginationLink = document.querySelectorAll('.pagination-item-link');
+
     if (document.querySelector('.pagination-item--active a').textContent == 1) {
         paginationLink[0].classList.add('pagination-item-link--disable');
         if (paginationLink[0].attributes.href) {
@@ -335,13 +310,11 @@ ratingStar.forEach(function (itemClicked) {
 // filter items by check
 
 var mobileCategoryItemCheckbox = document.querySelectorAll(
-    'input[type="checkbox"]'    
+    'input[type="checkbox"]:not(#mobile-search)'
 );
 
 mobileCategoryItemCheckbox.forEach(function (itemClicked) {
     itemClicked.addEventListener('click', function (e) {
-        console.log(e.target.checked);
-
         e.target.checked = !e.target.checked;
 
         shuffer();

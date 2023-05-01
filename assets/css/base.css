@@ -87,11 +87,11 @@ html {
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     animation: fadeIn linear 0.3s;
-    display: none;
+    /* display: none; */
 }
 
 .modal__body {
@@ -164,6 +164,10 @@ html {
     border-radius: 3px;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+}
+
+.pagination-item:not(.pagination-item--active):not(:first-of-type):not(:last-of-type):hover .pagination-item-link{
+    color: var(--primary-color);
 }
 
 .pagination-item.pagination-item--active {
