@@ -980,6 +980,7 @@ border-color: red green blue yellow */
     align-items: center;
     justify-content: space-between;
     position: relative;
+    user-select: none;
 }
 
 .price-icon {
@@ -1003,7 +1004,7 @@ border-color: red green blue yellow */
     z-index: 5;
 }
 
-.home-filter-sort:hover .home-filter-sort-list {
+.home-filter-sort-list--visible {
     display: block;
 }
 

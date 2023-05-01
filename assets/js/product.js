@@ -300,23 +300,20 @@ for (var i = 0; i < 4; i++) {
     };
 }
 
-// filter items by category
+// // filter items by category
 
 var mobileCategoryItem = document.querySelectorAll('.category-group-item');
 
 mobileCategoryItem.forEach(function (itemClicked) {
-    itemClicked.onclick = function (e) {
-        var input = e.target.querySelector('input');
+    itemClicked.addEventListener('click', function (e) {
+        var input = e.target
+            .closest('.category-group-item')
+            .querySelector('input[type="checkbox"]');
 
-        if (input.checked) {
-            input.checked = false;
-            isChecked = false;
-        } else {
-            input.checked = true;
-            isChecked = true;
-        }
+        input.checked = !input.checked;
+
         shuffer();
-    };
+    });
 });
 
 // filter items by star rating
@@ -324,18 +321,31 @@ mobileCategoryItem.forEach(function (itemClicked) {
 var ratingStar = document.querySelectorAll('.star-checked, .star-uncheck');
 
 ratingStar.forEach(function (itemClicked) {
-    itemClicked.onclick = function (e) {
-        var parentElement = e.target.parentNode;
-        var input = parentElement.querySelector('input');
-        if (input.checked) {
-            input.checked = false;
-            isChecked = false;
-        } else {
-            input.checked = true;
-            isChecked = true;
-        }
+    itemClicked.addEventListener('click', function (e) {
+        var input = e.target
+            .closest('.rating-star')
+            .querySelector('input[type="checkbox"]');
+
+        input.checked = !input.checked;
+
         shuffer();
-    };
+    });
+});
+
+// filter items by check
+
+var mobileCategoryItemCheckbox = document.querySelectorAll(
+    'input[type="checkbox"]'    
+);
+
+mobileCategoryItemCheckbox.forEach(function (itemClicked) {
+    itemClicked.addEventListener('click', function (e) {
+        console.log(e.target.checked);
+
+        e.target.checked = !e.target.checked;
+
+        shuffer();
+    });
 });
 
 // filter theo thứ tự sắp xếp
@@ -361,21 +371,27 @@ refreshButton.forEach(function (itemClicked) {
 });
 
 // filter theo tăng giá, giảm giá
+var priceParent = document.querySelector('.home-filter-sort');
+var priceSortList = document.querySelector('.home-filter-sort-list');
 var priceBtn = document.querySelector('.home-filter-sort-btn');
-var homeFilterSort = document.querySelectorAll('.home-filter-sort-item-link');
-homeFilterSort.forEach(function (itemClicked) {
-    itemClicked.onclick = function (e) {
-        console.log(e.target.textContent);
-        priceBtn.innerText = e.target.textContent;
-        priceBtn.style.color = 'var(--primary-color)';
-        shuffer();
-    };
-});
-// for (var i = 0; i < 2; i++) {
-//     homeFilterSort[i].onclick = function () {
-//         shuffer();
-//     };
-// }
+
+priceParent.onmouseenter = function () {
+    priceSortList.classList.add('home-filter-sort-list--visible');
+    var homeFilterSort = document.querySelectorAll(
+        '.home-filter-sort-item-link'
+    );
+    homeFilterSort.forEach(function (itemClicked) {
+        itemClicked.onclick = function (e) {
+            priceBtn.innerText = e.target.textContent;
+            priceBtn.style.color = 'var(--primary-color)';
+            priceSortList.classList.remove('home-filter-sort-list--visible');
+            shuffer();
+        };
+    });
+};
+priceParent.onmouseleave = function () {
+    priceSortList.classList.remove('home-filter-sort-list--visible');
+};
 
 // chuyển trang
 var homeFilterPage = document.querySelectorAll('.home-filter-page-btn');
