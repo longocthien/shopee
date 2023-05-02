@@ -54,7 +54,12 @@
         display: inline-block;
         margin-top: 10px;
     }
-
+    .copyright-block {
+        display: none;
+    }
+    .header__logo-label {
+        display: none;
+    }
 }
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
@@ -151,5 +156,14 @@
     }
     .footer-download-app {
         margin-left: 0;
+    }
+    #form-1 {
+        margin: auto;
+        width: 100%;
+        height: 458px;
+        right: 154px;
+        top: 84px;
+        border-radius: 5px;
+        padding: 30px;
     }
 }
