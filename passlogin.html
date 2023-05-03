@@ -16,7 +16,6 @@
         />
         <link rel="stylesheet" href="./assets/css/base.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
-        <link rel="stylesheet" href="./assets/css/passlogin.css" />
         <link rel="stylesheet" href="./assets/css/grid.css" />
         <link rel="stylesheet" href="./assets/css/responsive.css" />
         <link
@@ -103,10 +102,10 @@
                                 </a>
                                 <!-- thông báo -->
                                 <div class="header__notifi">
-                                    <!-- <header class="header__notifi-header">
+                                    <header class="header__notifi-header">
                                         <h3>Thông Báo Mới Nhận</h3>
-                                    </header> -->
-                                    <!-- <ul class="header__notifi-list">
+                                    </header>
+                                    <ul class="header__notifi-list">
                                         <li class="header__notifi-item">
                                             <a
                                                 href="#!"
@@ -254,18 +253,7 @@
                                             class="header__notifi-footer-btn"
                                             >Xem tất cả</a
                                         >
-                                    </footer> -->
-                                    <img class="notion-img" src="./assets/img/notion.png" alt="">
-                                    <div class="header__notifi-name">Đăng nhập để xem Thông báo</div>
-                                    <div class="account-block">
-                                        <div class="signup-block">
-                                            <a class="signup-block__link" href="./signup.html">Đăng ký</a>
-                                        </div>
-                                        <div class="login-block">
-                                            <a class="login-block__link" href="./login.html">Đăng nhập</a>
-                                        </div>
-                                    </div>
-                                      
+                                    </footer>
                                 </div>
                             </li>
                             <li class="header__nav-item">
@@ -277,7 +265,7 @@
                                 </a>
                             </li>
 
-                            <li
+                            <!-- <li
                                 class="header__nav-item header__nav-item--bold header__nav-item--separate"
                             >
                                 <a href="./signup.html" class="header__nav-item-link"
@@ -288,9 +276,9 @@
                                 <a href="./login.html" class="header__nav-item-link"
                                     >Đăng nhập</a
                                 >
-                            </li>
+                            </li> -->
 
-                            <!-- <li class="header__nav-item header__nav-user">
+                            <li class="header__nav-item header__nav-user">
                             <img src="./assets/img/user.png" class="header__nav-user-avt">
                             <a href="#!" class="header__nav-item-link header__nav-item--bold">Lò Ngọc Thiện</a>
                             <ul class="header__nav-user-menu">
@@ -304,7 +292,7 @@
                                     <a href="./index.html">Đăng xuất</a>
                                 </li>
                             </ul>
-                            </li> -->
+                            </li>
                         </ul>
                     </nav>
                     <!-- search -->
@@ -382,27 +370,62 @@
                         <!-- header__cart--no-cart --><!-- header__cart--has-cart -->
                         <div class="header__cart header__cart--has-cart">
                             <i
-                                class="header__cart-icon fas fa-shopping-cart"                                
-                                
+                                class="header__cart-icon fas fa-shopping-cart"
                             ></i>
-                            <div class="header__cart-list has-cart">
-                                <img
-                                src="./assets/img/sp/no-cart.png"
-                                class="header__no-cart-img"
-                            />
-                            <p class="header__no-cart-text">
-                                Chưa có sản phẩm
-                            </p>
-                              
+                            <div class="header__cart-count">4</div>
 
-                                <!-- <h4 class="header__cart-heading">
+                            <div class="header__cart-list no-cart">
+                                <img
+                                    src="./assets/img/sp/no-cart.png"
+                                    class="header__no-cart-img"
+                                />
+                                <p class="header__no-cart-text">
+                                    Chưa có sản phẩm
+                                </p>
+                            </div>
+
+                            <div class="header__cart-list has-cart">
+                                <h4 class="header__cart-heading">
                                     Sản phẩm đã chọn
                                 </h4>
                                 <ul class="header__cart-list-item">
                                     <li class="header__cart-item">
-                                    
-                                    </li> -->
-                                    <!-- <li class="header__cart-item">
+                                        <img
+                                            src="./assets/img/buy/1.PNG"
+                                            class="header__cart-item-img"
+                                        />
+                                        <div class="header__cart-item-info">
+                                            <div
+                                                class="header__cart-item-heading"
+                                            >
+                                                <h3
+                                                    class="header__cart-item-name"
+                                                >
+                                                    Thanh Thanh 2000 1m57 46kg
+                                                    88-62-89
+                                                </h3>
+                                                <p
+                                                    class="header__cart-item-price"
+                                                >
+                                                    2.000.000đ
+                                                </p>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <p
+                                                    class="header__cart-item-number"
+                                                >
+                                                    x 2
+                                                </p>
+                                                <div
+                                                    class="header__cart-item-close"
+                                                >
+                                                    Xoá
+                                                    <i class="fas fa-times"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
                                         <img
                                             src="./assets/img/buy/2.PNG"
                                             class="header__cart-item-img"
@@ -661,7 +684,7 @@
                                         class="btn btn--primary header__cart-see-cart"
                                         >Xem giỏ hàng</a
                                     >
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>

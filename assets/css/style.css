@@ -583,7 +583,7 @@ border-color: red green blue yellow */
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 10;
+    z-index: 9999;
     display: none;
     transform-origin: 95% top;
     animation: grow ease-in 0.3s;
@@ -609,6 +609,7 @@ border-color: red green blue yellow */
 }
 
 .header__no-cart-img {
+    margin-top: 50px;
     width: 50%;
 }
 
