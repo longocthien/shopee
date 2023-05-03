@@ -197,6 +197,22 @@ Validator.isPhone = function (selector, message) {
     };
 };
 
+Validator.isPhoneOrEmail = function (selector, message) {
+    return {
+        selector: selector,
+        test: function (value) {
+            var regex = /^(0|\+?84)(3|5|7|8|9)[0-9]{8}$|^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            return regex.test(value)
+                ? undefined
+                : message || 'Số điện thoại hoặc email không hợp lệ';
+        },
+    };
+};
+
+
+
+
+
 Validator.minLength = function (selector, minlength, message) {
     return {
         selector: selector,
