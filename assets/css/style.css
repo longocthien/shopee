@@ -1367,6 +1367,7 @@ border-color: red green blue yellow */
 .copyright-block {
     justify-content: space-between;
     text-align: center;
+    width: 1200px;
 }
 
 .copyright-desc {
