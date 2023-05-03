@@ -475,8 +475,7 @@
             </div>
         </footer>
         <script src="./assets/js/validator.js"></script>
-        <script>
-            // Mong muốn của chúng ta
+        <script>           
             Validator({
                 form: '#form-1',
                 formGroupSelector: '.form-group',
@@ -486,22 +485,7 @@
                         '#phone',
                         'Xin hãy nhập số điện thoại'
                     ),
-                    Validator.isPhone('#phone'),
-                    // Validator.isEmail('#email'),
-                    // Validator.minLength('#password', 6),
-                    // Validator.isRequired('#password_confirmation'),
-                    // Validator.isRequired(
-                    //     'input[name="gender"]',
-                    //     'Vui lòng chọn giới tính'
-                    // ),
-                    // Validator.isConfirmed(
-                    //     '#password_confirmation',
-                    //     function () {
-                    //         return document.querySelector('#form-1 #password')
-                    //             .value;
-                    //     },
-                    //     'Mật khẩu nhập lại không chính xác'
-                    // ),
+                    Validator.isPhone('#phone')
                 ],
                 onSubmit: function (data) {
                     // Call API`

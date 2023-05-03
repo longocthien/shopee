@@ -21,6 +21,7 @@
 
 * {
     box-sizing: inherit;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -166,7 +167,10 @@ html {
     -webkit-tap-highlight-color: transparent;
 }
 
-.pagination-item:not(.pagination-item--active):not(:first-of-type):not(:last-of-type):hover .pagination-item-link{
+.pagination-item:not(.pagination-item--active):not(:first-of-type):not(
+        :last-of-type
+    ):hover
+    .pagination-item-link {
     color: var(--primary-color);
 }
 

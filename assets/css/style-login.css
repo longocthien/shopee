@@ -7,6 +7,11 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.header__logo {
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
 .form-group.invalid .form-control {
     border-color: #f33a58;
     background: #fff6f7;

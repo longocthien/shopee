@@ -60,6 +60,10 @@
     .header__logo-label {
         display: none;
     }
+    .howtoqr-block {
+        right: 154px;
+        z-index: 1;
+    }
 }
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
@@ -160,13 +164,24 @@
     #form-1 {
         width: 100%;
         min-height: 50%;
-       left: 0;
+        left: 0;
         top: 55px;
     }
     #form-2 {
         width: 100%;
         min-height: 50%;
-       left: 0;
+        left: 0;
         top: 55px;
+    }
+    .howtoqr-block {
+        width: 100%;
+        min-height: 50%;
+        left: 0;
+        top: 55px;
+        z-index: 1;
+    }
+
+    .close-btn {      
+        right: 20px;
     }
 }
