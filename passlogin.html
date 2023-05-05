@@ -345,7 +345,7 @@
                             <i
                                 class="header__cart-icon fas fa-shopping-cart"
                             ></i>
-                            <div class="header__cart-count">5</div>
+                            <div class="header__cart-count"></div>
 
                             <div class="header__cart-list no-cart">
                                 <img
@@ -491,7 +491,7 @@
                                                 <p
                                                     class="header__cart-item-number"
                                                 >
-                                                    x 3
+                                                    x 1
                                                 </p>
                                                 <div
                                                     class="header__cart-item-close"
@@ -519,7 +519,7 @@
                                                 <p
                                                     class="header__cart-item-price"
                                                 >
-                                                    11.190.000đ
+                                                    22,380,000đ
                                                 </p>
                                             </div>
                                             <div class="header__cart-item-body">
@@ -1518,22 +1518,31 @@
                 }
             }
             var closeBtn = document.querySelectorAll('.header__cart-item-close');
+            var buyItemGroup = document.querySelector('.header__cart-count');
+            var cartItems = document.querySelectorAll('.header__cart-item');
+            // cài số lượng theo số lượng items
+            buyItemGroup.innerText = cartItems.length;
 
             if (closeBtn) {
                 closeBtn.forEach(function(elementClicked) {
                     elementClicked.addEventListener('click', function() {
                         var deleteParentElement = getParent(elementClicked, '.header__cart-item');
                         deleteParentElement.remove();
+                        var cartItems = document.querySelectorAll('.header__cart-item');
 
                         // Kiểm tra xem còn header__cart-item nào không
-                        var cartItems = document.querySelectorAll('.header__cart-item');
+                        
                         if (cartItems.length === 0) {
                             // Nếu không có phần tử nào, render lại HTML mặc định
                             renderShoppingCrates();
                         }
+                        else {
+                            buyItemGroup.innerText = cartItems.length;
+                        }
                     });
                 });
             } 
+            var shoppingCrates = document.querySelector('.header__cart.header__cart--has-cart');
             function renderShoppingCrates() {
                 var shoppingCrates = document.querySelector('.header__cart.header__cart--has-cart');
                 var defaultHtml = `
