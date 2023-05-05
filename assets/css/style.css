@@ -905,14 +905,74 @@ border-color: red green blue yellow */
     font-size: 1.4rem;
     color: var(--text-color);
     padding: 8px 0;
-    cursor: pointer;
     user-select: none;
 }
+
+.category-group-item label,
+.category-group-item input
+ {
+    cursor: pointer;
+}
+
 
 .category-group-item-check {
     margin-right: 12px;
     cursor: pointer;
 }
+
+/* Custom checkbox */
+.category-group-item-check ~ label {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+
+.category-group-item-check ~ label::before,
+.category-group-item-check ~ label::after {
+  content: "";
+  display: inline-block;
+}
+
+.category-group-item-check ~ label::before {
+  width: 11px;
+  height: 11px;
+  margin-right: 8px;
+  border: 1px solid #888;
+  border-radius: 2px;
+}
+
+.category-group-item [type="checkbox"]:checked ~ label::before {
+  /* background: #f05123; */
+  /* border-color: #f05123; */
+}
+
+.category-group-item [type="checkbox"]:checked ~ label::after {
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 7px;
+    height: 3px;
+    border-left: 2px solid rgb(240, 81, 35);
+    border-bottom: 2px solid rgb(240, 81, 35);
+    rotate: -45deg;
+}
+
+
+.rating-star [type="checkbox"]:checked ~ label::after {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    width: 7px;
+    height: 3px;
+    border-left: 2px solid rgb(240, 81, 35);
+    border-bottom: 2px solid rgb(240, 81, 35);
+    rotate: -45deg;
+}
+
+/* xxxxxxxxxxxxxxx */
+
 
 .category-group-filter {
     display: flex;
@@ -942,16 +1002,17 @@ border-color: red green blue yellow */
     justify-content: space-between;
     font-size: 1.5rem;
     width: 70%;
-    padding: 8px 0;
     cursor: pointer;
 }
 
 .rating-star .star-checked {
+    padding: 8px 1px;
     color: #ffe400;
     font-weight: 900;
 }
 
 .rating-star .star-uncheck {
+    padding: 8px 1px;
     color: #ffe400;
     font-weight: unset;
 }

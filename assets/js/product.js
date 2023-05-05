@@ -302,13 +302,24 @@ mobileCategoryItem.forEach(function (itemClicked) {
 // filter items by star rating
 
 var ratingStar = document.querySelectorAll('.star-checked, .star-uncheck');
+var ratingStarInput = document.querySelectorAll('.rating-star label');
+
+ratingStarInput.forEach(function (itemClicked) {
+    itemClicked.addEventListener('click', function (e) {
+        var input = e.target
+            .closest('.rating-star')
+            .querySelector('input[type="checkbox"]');
+        input.checked = !input.checked;
+
+        shuffer();
+    });
+})
 
 ratingStar.forEach(function (itemClicked) {
     itemClicked.addEventListener('click', function (e) {
         var input = e.target
             .closest('.rating-star')
             .querySelector('input[type="checkbox"]');
-
         input.checked = !input.checked;
 
         shuffer();
