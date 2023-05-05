@@ -1,4 +1,4 @@
-const dataUrl = 'https://longocthien.github.io/shopee/shopee.json';
+const dataUrl = 'http://127.0.0.1:5500/shopee.json';
 
 fetch(dataUrl)
     .then((response) => response.json())
@@ -31,8 +31,8 @@ function renderItem(items) {
                         <div class="price-block">
                             <label class="home-product-item__price-old">${item.oldPrice}đ</label>
                             <label class="home-product-item__price-new">${item.newPrice}đ</label>
+                            <i class="home-product-item__ship fas fa-shipping-fast"></i>
                         </div>
-                        <i class="home-product-item__ship fas fa-shipping-fast"></i>
                     </div>
                     <div class="home-product-item__footer">
                         <div class="home-product-item__save">

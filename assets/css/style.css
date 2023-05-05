@@ -1280,7 +1280,6 @@ border-color: red green blue yellow */
 
 .home-product-item__price-old {
     flex: 1;
-    padding-right: 20px;
     margin: 0;
     font-size: 1.3rem;
     color: #999;
