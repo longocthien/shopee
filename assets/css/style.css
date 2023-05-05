@@ -1288,7 +1288,7 @@ border-color: red green blue yellow */
 }
 
 .home-product-item__price-new {
-    width: 55px;
+    width: 65px;
     margin: 0;
     font-size: 1.4rem;
     color: var(--primary-color);
