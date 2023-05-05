@@ -94,6 +94,13 @@
     .header__no-cart-text {
         padding-bottom: 30px;
     }
+    .home-product-item__price-old {
+        font-size: 1.1rem;
+    }
+
+    .home-product-item__price-new {
+        width: 58px;
+    }
 }
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
@@ -211,7 +218,7 @@
         z-index: 1;
     }
 
-    .close-btn {      
+    .close-btn {
         right: 20px;
     }
     .header__cart.header__cart--has-cart {
