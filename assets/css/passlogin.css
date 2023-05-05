@@ -42,3 +42,8 @@
     text-decoration: none;
     color: #333;
 }
+
+.signup-block__link:hover,
+.login-block__link:hover {
+    color: var(--primary-color);
+}

@@ -1,4 +1,4 @@
-const dataUrl = 'https://cdn.crfnetwork.cyou/database/shopee.json';
+const dataUrl = 'http://127.0.0.1:5500/shopee.json';
 
 fetch(dataUrl)
     .then((response) => response.json())
@@ -336,12 +336,15 @@ homeFilter.forEach(function (itemClicked) {
 });
 
 // Tải lại trang
-var refreshButton = document.querySelectorAll('.category-group-filter-btn');
-refreshButton.forEach(function (itemClicked) {
-    itemClicked.onclick = function () {
-        location.reload();
-    };
-});
+var applyButton = document.querySelector('.apply-btn');
+var refreshButton = document.querySelector('.category-group--margin');
+console.log(refreshButton)
+applyButton.onclick = function () {
+    shuffer();
+};
+refreshButton.onclick = function () {
+    location.reload();
+};
 
 // filter theo tăng giá, giảm giá
 var priceParent = document.querySelector('.home-filter-sort');

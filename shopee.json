@@ -1,0 +1,227 @@
+[
+    {
+        "id": "1",
+        "name": "[Nhập ELAP5A giảm 5% tối đa 1 triệu] Apple iPhone 14 Pro 128GB",
+        "oldPrice": "35.000.000",
+        "newPrice": "31.000.000",
+        "saled": "3,8k",
+        "origin": "Hà Nội",
+        "saleOff": "12"
+    },
+    {
+        "id": "2",
+        "name": "[Nhập ELAP555 giảm 5% tối đa 1 triệu] Apple iPhone 13 128GB",
+        "oldPrice": "24.990.000",
+        "newPrice": "16.990.000",
+        "saled": "882",
+        "origin": "TP. Hồ Chí Minh",
+        "saleOff": "33"
+    },
+    {
+        "id": "3",
+        "name": "Điện Thoại Samsung Galaxy Z Flip4 128GB",
+        "oldPrice": "23.990.000",
+        "newPrice": "15.920.000",
+        "saled": "477",
+        "origin": "Hà Nội",
+        "saleOff": "35"
+    },
+    {
+        "id": "4",
+        "name": "Điện Thoại Samsung Galaxy S22 Ultra Chính hãng",
+        "oldPrice": "29.990.000",
+        "newPrice": "22.892.000",
+        "saled": "1,9k",
+        "origin": "TP. Hồ Chí Minh",
+        "saleOff": "20"
+    },
+    {
+        "id": "5",
+        "name": "[Mã ELAAR7 giảm 7% tối đa 2TR] MacBook Air 13\" M1 LATE 2020 256GB - New Seal Hàng Chính Hãng",
+        "oldPrice": "28.990.000",
+        "newPrice": "19.490.000",
+        "saled": "1,1k",
+        "origin": "TP. Hồ Chí Minh",
+        "saleOff": "33"
+    },
+    {
+        "id": "6",
+        "name": "[Mã ELAAR7 giảm 7% tối đa 2TR] MacBook Apple Pro M2 13\" 2022 8CPU 10GPU 256GB| RAM 16GB Chính Hãng New Seal (Z16R0003V)",
+        "oldPrice": "38.990.000",
+        "newPrice": "37.940.000",
+        "saled": "2,3k",
+        "origin": "Hồ Chí Minh",
+        "saleOff": "3"
+    },
+    {
+        "id": "7",
+        "name": "[Mã ELAAR7 giảm 7% tối đa 2TR] Apple iPad Pro M2 11 inch WiFi",
+        "oldPrice": "23.990.000",
+        "newPrice": "250.000",
+        "saled": "3,2k",
+        "origin": "Hồ Chí Minh",
+        "saleOff": "13"
+    },
+    {
+        "id": "8",
+        "name": "[Mã ELAAR7 giảm 7% tối đa 2TR] Apple Ipad Air 5 10.9 inch (2022), Wi-Fi",
+        "oldPrice": "19.990.000",
+        "newPrice": "14.550.000",
+        "saled": "61",
+        "origin": "Hà Nội",
+        "saleOff": "27"
+    },
+    {
+        "id": "9",
+        "name": "Bút thông minh Apple Pencil 2 (MU8F2ZP/A) - Bảo hành 12 tháng",
+        "oldPrice": "3.990.000",
+        "newPrice": "2.490.000",
+        "saled": "35",
+        "origin": "Hà Nội",
+        "saleOff": "38"
+    },
+    {
+        "id": "10",
+        "name": "[Mã ELAAR7 giảm 7% tối đa 2TR] Tai nghe Bluetooth Apple AirPods Pro (Gen 2) Chính hãng VN/A",
+        "oldPrice": "6.990.000",
+        "newPrice": "6.330.000",
+        "saled": "13",
+        "origin": "Đà Nẵng",
+        "saleOff": "9"
+    },
+    {
+        "id": "11",
+        "name": "[Mã ELAAR7 giảm 7% tối đa 2TR] Apple Watch Series 8 viền thép dây Milanese Chính hãng",
+        "oldPrice": "21.990.000",
+        "newPrice": "20.590.000",
+        "saled": "5,2k",
+        "origin": "Hà Nội",
+        "saleOff": "6"
+    },
+    {
+        "id": "12",
+        "name": "[Mã ELAAR7 giảm 7% tối đa 2TR] Thiết bị định vị Apple AirTag chính hãng VN/A",
+        "oldPrice": "2.490.000",
+        "newPrice": "2.430.000",
+        "saled": "2k",
+        "origin": "Hồ Chí Minh",
+        "saleOff": "2"
+    },
+    {
+        "id": "13",
+        "name": "[Mã ELLAP4 giảm 400K] Laptop LG Gram 2022 17Z90Q-G.AH74A5-D i7-1260P | 16GB | 512GB (Không quà tặng)",
+        "oldPrice": "47.990.000",
+        "newPrice": "35.790.000",
+        "saled": "79",
+        "origin": "Hà Nội",
+        "saleOff": "25"
+    },
+    {
+        "id": "14",
+        "name": "Apple 20W USB-C Power Adapter",
+        "oldPrice": "790.000",
+        "newPrice": "470.000",
+        "saled": "18,1k",
+        "origin": "Bắc Ninh",
+        "saleOff": "41"
+    },
+    {
+        "id": "15",
+        "name": "Tai Nghe Chống Ồn SONY WH-1000XM5 | Hàng Chính Hãng Sony Việt Nam",
+        "oldPrice": "9.490.000",
+        "newPrice": "7.990.000",
+        "saled": "7,1k",
+        "origin": "Đà Nẵng",
+        "saleOff": "16"
+    },
+    {
+        "id": "16",
+        "name": "Máy giặt Samsung cửa trước Digital Inverter 8kg (WW80T3020WW) - Miễn phí công lắp đặt",
+        "oldPrice": "10.090.000",
+        "newPrice": "5.390.000",
+        "saled": "286",
+        "origin": "Vũng Tàu",
+        "saleOff": "47"
+    },
+    {
+        "id": "17",
+        "name": "[Mã ELPANATOP Giảm 15% tối đa 700K] Tủ lạnh 4 cánh Panasonic 540L NR-YW590YMMV - giảm dư lượng thuốc trừ sâu",
+        "oldPrice": "68.990.000",
+        "newPrice": "61.990.000",
+        "saled": "1,2k",
+        "origin": "Hồ Chí Minh",
+        "saleOff": "10"
+    },
+    {
+        "id": "18",
+        "name": "Máy sấy tóc Dyson Supersonic ™ HD08 (Xám bạc/Hồng)",
+        "oldPrice": "11.990.000",
+        "newPrice": "10.390.000",
+        "saled": "95",
+        "origin": "Đồng Nai",
+        "saleOff": "13"
+    },
+    {
+        "id": "19",
+        "name": "Đồng Hồ Samsung Galaxy Galaxy Watch4 Bluetooth (40mm)",
+        "oldPrice": "6.490.000",
+        "newPrice": "3.290.000",
+        "saled": "779",
+        "origin": "Lào Cai",
+        "saleOff": "49"
+    },
+    {
+        "id": "20",
+        "name": "Robot hút bụi, lau sàn Samsung Powerbot0E lực hút cực mạnh 4200Pa (VR05R5050WK)",
+        "oldPrice": "7.890.000",
+        "newPrice": "5.150.000",
+        "saled": "1,1k",
+        "origin": "Hải Dương",
+        "saleOff": "35"
+    },
+    {
+        "id": "21",
+        "name": "Loa Bluetooth Marshall Stanmore III - Bảo Hành Chính Hãng 1 Đổi 1 Trong 1 Năm",
+        "oldPrice": "11.990.000",
+        "newPrice": "9.990.000",
+        "saled": "1,9k",
+        "origin": "Hà Nội",
+        "saleOff": "20"
+    },
+    {
+        "id": "22",
+        "name": "[Mã ELHP10 giảm đến 1TR5] Laptop HP Pavilion 15-eg0513TU | i3-1125G4 | 4GB | 256GB | 15.6' FHD | Win 10",
+        "oldPrice": "15.190.000",
+        "newPrice": "11.190.000",
+        "saled": "60",
+        "origin": "Hà Nội",
+        "saleOff": "26"
+    },
+    {
+        "id": "23",
+        "name": "[Mã ELLAP4 giảm 400K] Laptop LG Gram 2022 14ZD90Q-G.AX31A5 i3-1220P | 8GB | 256GB | Intel UHD Graphics | 14'",
+        "oldPrice": "23.290.000",
+        "newPrice": "19.490.000",
+        "saled": "3,8k",
+        "origin": "Đà Nẵng",
+        "saleOff": "16"
+    },
+    {
+        "id": "24",
+        "name": "[Mã ELAAR7 giảm 7% tối đa 2TR] Apple Watch Series 8 GPS Chính hãng",
+        "oldPrice": "10.990.000",
+        "newPrice": "10.590.000",
+        "saled": "14",
+        "origin": "Hà Nội",
+        "saleOff": "4"
+    },
+    {
+        "id": "25",
+        "name": "[Ngòi Chính Hãng] Đầu ngòi bút thay thế loại nhám cao cấp AstroMazing cho bút Apple Pencil 1 và 2, ngòi bút gốc kim loại",
+        "oldPrice": "89.000",
+        "newPrice": "169.000",
+        "saled": "9,5k",
+        "origin": "Hà Nội",
+        "saleOff": "20"
+    }
+]
