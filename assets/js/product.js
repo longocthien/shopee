@@ -419,3 +419,4 @@ homeFilterPage[1].onclick = function () {
         homeFilterPage[1].classList.add('home-filter-page-btn--disable');
     }
 };
+

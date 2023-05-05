@@ -493,6 +493,22 @@
                     window.location.href = './passlogin.html';
                 },
             });
+
+              // Xác định người dùng quay dọc hay ngang, từ đó set thông số
+
+        var backgroundWidth = document.querySelector('.signup__block--img');
+
+        window.addEventListener("orientationchange", function() {
+            if (window.orientation === 90 || window.orientation === -90) {
+                document.body.style.height = 'calc(100vh + 210px)';
+                document.documentElement.style.height = 'calc(100vh + 210px)';
+                backgroundWidth.style.height = 'calc(100vh + 210px)';
+            } else {
+                document.body.style.height = 'calc(100vh - 280px)';
+                document.documentElement.style.height = 'calc(100vh - 280px)';
+                backgroundWidth.style.height = 'calc(100vh - 280px)';
+            }
+        });
         </script>
     </body>
 </html>

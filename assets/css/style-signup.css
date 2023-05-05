@@ -80,7 +80,7 @@ input:-webkit-autofill:active {
     background-image: url(../img/backgroup-signup.png);
     background-repeat: no-repeat;
     background-size: contain;
-    min-height: calc(100vh - 84px)  ;
+    min-height: 606px;
     width: 100%;
     background-position: center center;
 }

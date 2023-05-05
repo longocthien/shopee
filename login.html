@@ -527,10 +527,10 @@
             closeEye.style.display = 'block';
             password.type = "password";
             };
+            
+             // Xác định người dùng quay dọc hay ngang, từ đó set thông số
 
-            // Xác định người dùng quay dọc hay ngang, từ đó set thông số
-
-            var backgroundWidth = document.querySelector('.signup__block--img');
+             var backgroundWidth = document.querySelector('.signup__block--img');
 
             window.addEventListener("orientationchange", function() {
                 if (window.orientation === 90 || window.orientation === -90) {

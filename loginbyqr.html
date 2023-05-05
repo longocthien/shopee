@@ -455,7 +455,23 @@
         closeBtn.onclick = function() {
             qrBlock.style.display = 'none';
         }
-};
+        };
+
+        // Xác định người dùng quay dọc hay ngang, từ đó set thông số
+
+        var backgroundWidth = document.querySelector('.signup__block--img');
+
+        window.addEventListener("orientationchange", function() {
+            if (window.orientation === 90 || window.orientation === -90) {
+                document.body.style.height = 'calc(100vh + 250px)';
+                document.documentElement.style.height = 'calc(100vh + 250px)';
+                backgroundWidth.style.height = 'calc(100vh + 250px)';
+            } else {
+                document.body.style.height = 'calc(100vh - 84px)';
+                document.documentElement.style.height = 'calc(100vh - 84px)';
+                backgroundWidth.style.height = 'calc(100vh - 84px)';
+            }
+        });
 
        </script>
     </body>
