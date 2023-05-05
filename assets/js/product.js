@@ -338,7 +338,6 @@ homeFilter.forEach(function (itemClicked) {
 // Tải lại trang
 var applyButton = document.querySelector('.apply-btn');
 var refreshButton = document.querySelector('.category-group--margin');
-console.log(refreshButton)
 applyButton.onclick = function () {
     shuffer();
 };
