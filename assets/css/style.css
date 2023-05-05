@@ -1270,7 +1270,17 @@ border-color: red green blue yellow */
     justify-content: space-between;
 }
 
+.price-block {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
 .home-product-item__price-old {
+    flex: 1;
+    padding-right: 20px;
     margin: 0;
     font-size: 1.3rem;
     color: #999;
@@ -1278,11 +1288,15 @@ border-color: red green blue yellow */
 }
 
 .home-product-item__price-new {
+    width: 55px;
     margin: 0;
     font-size: 1.4rem;
     color: var(--primary-color);
-    margin-right: auto;
+    /* margin-right: auto; */
     margin-left: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .home-product-item__ship {
@@ -1338,6 +1352,9 @@ border-color: red green blue yellow */
 .home-product-item__saled {
     color: var(--text-color);
     font-size: 1.1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .home-product-item__origin {

@@ -28,8 +28,10 @@ function renderItem(items) {
                 <div class="home-product-item__info">
                     <h4 class="home-product-item__name">${item.name}</h4>
                     <div class="home-product-item__price">
-                        <p class="home-product-item__price-old">${item.oldPrice}đ</p>
-                        <p class="home-product-item__price-new">${item.newPrice}đ</p>
+                        <div class="price-block">
+                            <label class="home-product-item__price-old">${item.oldPrice}đ</label>
+                            <label class="home-product-item__price-new">${item.newPrice}đ</label>
+                        </div>
                         <i class="home-product-item__ship fas fa-shipping-fast"></i>
                     </div>
                     <div class="home-product-item__footer">
