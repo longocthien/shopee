@@ -64,6 +64,23 @@
         right: 154px;
         z-index: 1;
     }
+    .bars-logo {
+        display: block;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    .nav__pc {
+        display: none;
+    }
+    .nav__mb {
+        display: block;
+    }
+    .header__nav-item {
+        margin-bottom: 30px;
+    }
+    .header__nav-item-link {
+        color: #333;
+    }
 }
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
@@ -183,5 +200,8 @@
 
     .close-btn {      
         right: 20px;
+    }
+    .header__cart.header__cart--has-cart {
+        display: none;
     }
 }

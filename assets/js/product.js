@@ -260,20 +260,28 @@ function handlePagination() {
     }
 }
 
+
+// mobile - category - item;
+var mobileCategory = document.querySelectorAll('.mobile-category');
+mobileCategory.forEach(function (item) {
+    item.onclick = function () {
+        shuffer();
+    };
+});
 // category
 
-var headerCategoryItem = document.querySelectorAll('.header__sort-item');
+const headerCategoryItem = document.querySelectorAll('.header__sort-item');
 
-for (var i = 0; i < 4; i++) {
-    headerCategoryItem[i].onclick = function () {
-        var headerCategoryActive = document.querySelector(
+headerCategoryItem.forEach((item) => {
+    item.onclick = function () {
+        const headerCategoryActive = document.querySelector(
             '.header__sort-item--active'
         );
         headerCategoryActive.classList.remove('header__sort-item--active');
         this.classList.add('header__sort-item--active');
         shuffer();
     };
-}
+});
 
 // // filter items by category
 
@@ -310,7 +318,7 @@ ratingStar.forEach(function (itemClicked) {
 // filter items by check
 
 var mobileCategoryItemCheckbox = document.querySelectorAll(
-    'input[type="checkbox"]:not(#mobile-search)'
+    'input[type="checkbox"]:not(#mobile-search):not(#nav__mb--input)'
 );
 
 mobileCategoryItemCheckbox.forEach(function (itemClicked) {

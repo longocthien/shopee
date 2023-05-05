@@ -620,6 +620,87 @@ border-color: red green blue yellow */
     margin-bottom: 0;
 }
 
+/* thanh điều hướng */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.bars-logo {
+    width: 28px;
+    height: 28px;
+    display: none;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+    animation: fadeIn linear 0.2s;
+    z-index: 999;
+}
+.nav__mb {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 220px;
+    max-width: 100%;
+    background-color: #fff;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform linear 0.3s, opacity linear 0.3s;
+    z-index: 999;
+    display: none;
+}
+
+.nav__mb--list {
+    margin-top: 50px;
+    list-style-type: none;
+    padding-left: 0;
+}
+.nav__mb--link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 0;
+    font-size: 1.4rem;
+    padding-left: 40px;
+}
+
+.nav__mb--link:hover {
+    background-color: var(--primary-color);
+}
+
+#nav__mb--input:checked ~ .nav__overlay {
+    display: block;
+}
+
+.nav__mb--close {
+    width: 24px;
+    height: 24px;
+    color: #666;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+#nav__mb--input:checked ~ .nav__mb {
+    transform: translateX(0);
+    opacity: 1;
+}
+
 /* when has cart */
 
 .header__cart--has-cart .header__cart-icon:hover ~ .header__cart-list.has-cart,

@@ -150,7 +150,7 @@
                             ></i>
                         </label>
                         <div class="header__logo">
-                            <a href="#!" class="header__logo-link">
+                            <a href="./index.html" class="header__logo-link">
                                 <img
                                     src="./assets/img/logo/logo-full-white.png"
                                     class="header__logo-img"
@@ -228,6 +228,55 @@
 
                             </div>
                         </div>
+                        <!-- Thanh điều hướng -->
+                        <label for="nav__mb--input" class="bars-logo">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"
+                            >
+                                <path
+                                    fill="white"
+                                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                                />
+                            </svg>
+                        </label>
+        
+                        <input
+                            type="checkbox"
+                            hidden
+                            name="nav__input"
+                            id="nav__mb--input"
+                        />
+        
+                        <label for="nav__mb--input" class="nav__overlay"></label>
+        
+                        <nav class="nav__mb">
+                            <label for="nav__mb--input" class="nav__mb--close">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 384 512"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                                    />
+                                </svg>
+                            </label>
+                            <ul class="nav__mb--list">
+                                <li>
+                                    <a href="./signup.html" class="nav__mb--link">Đăng ký</a>
+                                </li>
+                                <li>
+                                    <a href="./login.html" class="nav__mb--link">Đăng nhập</a>
+                                </li>
+                                <li>
+                                    <a href="https://help.shopee.vn/portal" class="nav__mb--link">Hỗ trợ</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="nav__mb--link nav__mb--link--notion">Thông báo</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
                 <ul class="header__sort-bar">
@@ -661,87 +710,68 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- home product -->
-                            <div class="home-product">
-                                <nav class="mobile-category">
-                                    <ul class="mobile-category-list">
-                                        <li class="mobile-category-item">
-                                            <a
-                                                href="#!"
-                                                class="mobile-category-item-link"
-                                                >Thiết bị mạng</a
-                                            >
-                                        </li>
-                                        <li class="mobile-category-item">
-                                            <a
-                                                href="#!"
-                                                class="mobile-category-item-link"
-                                                >Chuột và bàn phím</a
-                                            >
-                                        </li>
-                                        <li class="mobile-category-item">
-                                            <a
-                                                href="#!"
-                                                class="mobile-category-item-link"
-                                                >USB</a
-                                            >
-                                        </li>
-                                        <li class="mobile-category-item">
-                                            <a
-                                                href="#!"
-                                                class="mobile-category-item-link"
-                                                >Link kiện máy tính</a
-                                            >
-                                        </li>
-                                        <li class="mobile-category-item">
-                                            <a
-                                                href="#!"
-                                                class="mobile-category-item-link"
-                                                >Wifi</a
-                                            >
-                                        </li>
-                                        <li class="mobile-category-item">
-                                            <a
-                                                href="#!"
-                                                class="mobile-category-item-link"
-                                                >Ổ cứng</a
-                                            >
-                                        </li>
-                                        <li class="mobile-category-item">
-                                            <a
-                                                href="#!"
-                                                class="mobile-category-item-link"
-                                                >CD/DVD</a
-                                            >
-                                        </li>
-                                        <li class="mobile-category-item">
-                                            <a
-                                                href="#!"
-                                                class="mobile-category-item-link"
-                                                >Tai nghe</a
-                                            >
-                                        </li>
-                                        <li class="mobile-category-item">
-                                            <a
-                                                href="#!"
-                                                class="mobile-category-item-link"
-                                                >Lót chuột</a
-                                            >
-                                        </li>
-                                        <li class="mobile-category-item">
-                                            <a
-                                                href="#!"
-                                                class="mobile-category-item-link"
-                                                >Micro</a
-                                            >
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <div
-                                    id="list-product"
-                                    class="row sm-gutter"
-                                ></div>                               
-                            </div>
+                           <!-- home product -->
+                           <div class="home-product">
+                            <nav class="mobile-category">
+                                <ul class="mobile-category-list">
+                                    
+                                                                  
+                                    <li class="mobile-category-item">
+                                        <a
+                                            href="#!"
+                                            class="mobile-category-item-link"
+                                            >Iphone</a
+                                        >
+                                    </li>
+                                    <li class="mobile-category-item">
+                                        <a
+                                            href="#!"
+                                            class="mobile-category-item-link"
+                                            >Samsung</a
+                                        >
+                                    </li>
+                                    <li class="mobile-category-item">
+                                        <a
+                                            href="#!"
+                                            class="mobile-category-item-link"
+                                            >LG</a
+                                        >
+                                    </li>      
+                                    <li class="mobile-category-item">
+                                        <a
+                                            href="#!"
+                                            class="mobile-category-item-link"
+                                            >Smart Watch</a
+                                        >
+                                    </li>
+                                    <li class="mobile-category-item">
+                                        <a
+                                            href="#!"
+                                            class="mobile-category-item-link"
+                                            >Tai nghe</a
+                                        >
+                                    </li>
+                                    <li class="mobile-category-item">
+                                        <a
+                                            href="#!"
+                                            class="mobile-category-item-link"
+                                            >Laptop</a
+                                        >
+                                    </li>
+                                    <li class="mobile-category-item">
+                                        <a
+                                            href="#!"
+                                            class="mobile-category-item-link"
+                                            >Robot hút mùi</a
+                                        >
+                                    </li>                                    
+                                </ul>
+                            </nav>
+                            <div
+                                id="list-product"
+                                class="row sm-gutter"
+                            ></div>                               
+                        </div>
                             <!-- pagination -->
                             <ul class="pagination home-product-pagination">
                                 <li class="pagination-item">
