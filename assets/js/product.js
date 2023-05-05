@@ -1,4 +1,4 @@
-const dataUrl = 'http://127.0.0.1:5500/shopee.json';
+const dataUrl = 'https://longocthien.github.io/shopee/shopee.json';
 
 fetch(dataUrl)
     .then((response) => response.json())
