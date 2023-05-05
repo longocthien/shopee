@@ -79,7 +79,20 @@
         margin-bottom: 30px;
     }
     .header__nav-item-link {
-        color: #333;
+        color: #fff;
+    }
+    .header__cart {
+        right: 0px;
+    }
+    .header__nav-user-avt {
+        width: 30px;
+        height: 30px;
+    }
+    .header__nav-item--bold {
+        font-size: 2rem;
+    }
+    .header__no-cart-text {
+        padding-bottom: 30px;
     }
 }
 /* Tablet */
