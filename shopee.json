@@ -5,8 +5,12 @@
         "oldPrice": "35.000.000",
         "newPrice": "31.000.000",
         "saled": "3,8k",
-        "origin": "Hà Nội",
-        "saleOff": "12"
+        "origin": "TP. Hồ Chí Minh",
+        "saleOff": "12",
+        "type": "phone",
+        "maker": "apple",
+        "ship": "Tiết kiệm",
+        "shop": "Yêu thích"
     },
     {
         "id": "2",
@@ -15,7 +19,11 @@
         "newPrice": "16.990.000",
         "saled": "882",
         "origin": "TP. Hồ Chí Minh",
-        "saleOff": "33"
+        "saleOff": "33",
+        "type": "phone",
+        "maker": "apple",
+        "ship": "Nhanh",
+        "shop": "Mall"
     },
     {
         "id": "3",
@@ -23,8 +31,12 @@
         "oldPrice": "23.990.000",
         "newPrice": "15.920.000",
         "saled": "477",
-        "origin": "Hà Nội",
-        "saleOff": "35"
+        "origin": "TP. Hồ Chí Minh",
+        "saleOff": "35",
+        "type": "phone",
+        "maker": "samsung",
+        "ship": "Nhanh",
+        "shop": "Yêu thích"
     },
     {
         "id": "4",
@@ -33,7 +45,11 @@
         "newPrice": "22.892.000",
         "saled": "1,9k",
         "origin": "TP. Hồ Chí Minh",
-        "saleOff": "20"
+        "saleOff": "20",
+        "type": "phone",
+        "maker": "samsung",
+        "ship": "Tiết kiệm",
+        "shop": "Mall"
     },
     {
         "id": "5",
@@ -42,7 +58,11 @@
         "newPrice": "19.490.000",
         "saled": "1,1k",
         "origin": "TP. Hồ Chí Minh",
-        "saleOff": "33"
+        "saleOff": "33",
+        "type": "laptop",
+        "maker": "apple",
+        "ship": "Nhanh",
+        "shop": "Mall"
     },
     {
         "id": "6",
@@ -50,8 +70,12 @@
         "oldPrice": "38.990.000",
         "newPrice": "37.940.000",
         "saled": "2,3k",
-        "origin": "Hồ Chí Minh",
-        "saleOff": "3"
+        "origin": "TP. Hồ Chí Minh",
+        "saleOff": "3",
+        "type": "laptop",
+        "maker": "apple",
+        "ship": "Tiết kiệm",
+        "shop": "Yêu thích"
     },
     {
         "id": "7",
@@ -59,8 +83,12 @@
         "oldPrice": "23.990.000",
         "newPrice": "25.000.000",
         "saled": "3,2k",
-        "origin": "Hồ Chí Minh",
-        "saleOff": "13"
+        "origin": "TP. Hồ Chí Minh",
+        "saleOff": "13",
+        "type": "tablet",
+        "maker": "apple",
+        "ship": "Nhanh",
+        "shop": "Mall"
     },
     {
         "id": "8",
@@ -68,8 +96,12 @@
         "oldPrice": "19.990.000",
         "newPrice": "14.550.000",
         "saled": "61",
-        "origin": "Hà Nội",
-        "saleOff": "27"
+        "origin": "TP. Hồ Chí Minh",
+        "saleOff": "27",
+        "type": "tablet",
+        "maker": "apple",
+        "ship": "Nhanh",
+        "shop": "Yêu thích"
     },
     {
         "id": "9",
@@ -77,8 +109,12 @@
         "oldPrice": "3.990.000",
         "newPrice": "2.490.000",
         "saled": "35",
-        "origin": "Hà Nội",
-        "saleOff": "38"
+        "origin": "TP. Hồ Chí Minh",
+        "saleOff": "38",
+        "type": "pencil",
+        "maker": "apple",
+        "ship": "Hỏa tốc",
+        "shop": "Yêu thích"
     },
     {
         "id": "10",
@@ -87,7 +123,11 @@
         "newPrice": "6.330.000",
         "saled": "13",
         "origin": "Đà Nẵng",
-        "saleOff": "9"
+        "saleOff": "9",
+        "type": "headphone",
+        "maker": "apple",
+        "ship": "Nhanh",
+        "shop": "Mall"
     },
     {
         "id": "11",
@@ -95,8 +135,12 @@
         "oldPrice": "21.990.000",
         "newPrice": "20.590.000",
         "saled": "5,2k",
-        "origin": "Hà Nội",
-        "saleOff": "6"
+        "origin": "TP. Hồ Chí Minh",
+        "saleOff": "6",
+        "type": "watch",
+        "maker": "apple",
+        "ship": "Hỏa tốc",
+        "shop": "Mall"
     },
     {
         "id": "12",
@@ -104,8 +148,12 @@
         "oldPrice": "2.490.000",
         "newPrice": "2.430.000",
         "saled": "2k",
-        "origin": "Hồ Chí Minh",
-        "saleOff": "2"
+        "origin": "TP. Hồ Chí Minh",
+        "saleOff": "2",
+        "type": "locate",
+        "maker": "apple",
+        "ship": "Hỏa tốc",
+        "shop": "Yêu thích"
     },
     {
         "id": "13",
@@ -114,7 +162,11 @@
         "newPrice": "35.790.000",
         "saled": "79",
         "origin": "Hà Nội",
-        "saleOff": "25"
+        "saleOff": "25",
+        "type": "laptop",
+        "maker": "lg",
+        "ship": "Nhanh",
+        "shop": "Mall"
     },
     {
         "id": "14",
@@ -123,7 +175,11 @@
         "newPrice": "470.000",
         "saled": "379",
         "origin": "Bắc Ninh",
-        "saleOff": "41"
+        "saleOff": "41",
+        "type": "charger",
+        "maker": "apple",
+        "ship": "Hỏa tốc",
+        "shop": "Yêu thích"
     },
     {
         "id": "15",
@@ -132,7 +188,11 @@
         "newPrice": "7.990.000",
         "saled": "7,1k",
         "origin": "Đà Nẵng",
-        "saleOff": "16"
+        "saleOff": "16",
+        "type": "headphone",
+        "maker": "sony",
+        "ship": "Nhanh",
+        "shop": "Mall"
     },
     {
         "id": "16",
@@ -141,7 +201,11 @@
         "newPrice": "5.390.000",
         "saled": "286",
         "origin": "Vũng Tàu",
-        "saleOff": "47"
+        "saleOff": "47",
+        "type": "cleaner",
+        "maker": "samsung",
+        "ship": "Tiết kiệm",
+        "shop": "Mall"
     },
     {
         "id": "17",
@@ -149,8 +213,12 @@
         "oldPrice": "68.990.000",
         "newPrice": "61.990.000",
         "saled": "729",
-        "origin": "Hồ Chí Minh",
-        "saleOff": "10"
+        "origin": "TP. Hồ Chí Minh",
+        "saleOff": "10",
+        "type": "refrigerator",
+        "maker": "panasonic",
+        "ship": "Hỏa tốc",
+        "shop": "Yêu thích"
     },
     {
         "id": "18",
@@ -159,7 +227,11 @@
         "newPrice": "10.390.000",
         "saled": "95",
         "origin": "Đồng Nai",
-        "saleOff": "13"
+        "saleOff": "13",
+        "type": "hairdryer",
+        "maker": "dyson",
+        "ship": "Hỏa tốc",
+        "shop": "Mall"
     },
     {
         "id": "19",
@@ -168,7 +240,11 @@
         "newPrice": "3.290.000",
         "saled": "779",
         "origin": "Lào Cai",
-        "saleOff": "49"
+        "saleOff": "49",
+        "type": "watch",
+        "maker": "samsung",
+        "ship": "Tiết kiệm",
+        "shop": "Yêu thích"
     },
     {
         "id": "20",
@@ -177,7 +253,11 @@
         "newPrice": "5.150.000",
         "saled": "1,1k",
         "origin": "Hải Dương",
-        "saleOff": "35"
+        "saleOff": "35",
+        "type": "vacuumcleaner",
+        "maker": "samsung",
+        "ship": "Hỏa tốc",
+        "shop": "Mall"
     },
     {
         "id": "21",
@@ -186,7 +266,11 @@
         "newPrice": "9.990.000",
         "saled": "1,9k",
         "origin": "Hà Nội",
-        "saleOff": "20"
+        "saleOff": "20",
+        "type": "speaker",
+        "maker": "marshall",
+        "ship": "Tiết kiệm",
+        "shop": "Yêu thích"
     },
     {
         "id": "22",
@@ -195,7 +279,11 @@
         "newPrice": "11.190.000",
         "saled": "60",
         "origin": "Hà Nội",
-        "saleOff": "26"
+        "saleOff": "26",
+        "type": "laptop",
+        "maker": "hp",
+        "ship": "Hỏa tốc",
+        "shop": "Mall"
     },
     {
         "id": "23",
@@ -204,7 +292,11 @@
         "newPrice": "19.490.000",
         "saled": "3,8k",
         "origin": "Đà Nẵng",
-        "saleOff": "16"
+        "saleOff": "16",
+        "type": "laptop",
+        "maker": "lg",
+        "ship": "Tiết kiệm",
+        "shop": "Yêu thích"
     },
     {
         "id": "24",
@@ -213,7 +305,11 @@
         "newPrice": "10.590.000",
         "saled": "14",
         "origin": "Hà Nội",
-        "saleOff": "4"
+        "saleOff": "4",
+        "type": "watch",
+        "maker": "apple",
+        "ship": "Hỏa tốc",
+        "shop": "Mall"
     },
     {
         "id": "25",
@@ -222,6 +318,10 @@
         "newPrice": "169.000",
         "saled": "9,5k",
         "origin": "Hà Nội",
-        "saleOff": "20"
-    }
+        "saleOff": "20",
+        "type": "pencil",
+        "maker": "apple",
+        "ship": "Tiết kiệm",
+        "shop": "Yêu thích"
+    }    
 ]

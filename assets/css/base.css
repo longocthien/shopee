@@ -175,8 +175,9 @@ html {
 }
 
 .pagination-item.pagination-item--active {
-    cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    pointer-events: none;
+    cursor: pointer;
 }
 
 .pagination-item.pagination-item--active:hover {

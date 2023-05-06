@@ -1378,6 +1378,10 @@ border-color: red green blue yellow */
     border-top-right-radius: 3px;
 }
 
+.home-product-item__favourite:contains('Mall') {
+    background-color: red;
+}
+
 .home-product-item__favourite::after {
     content: '';
     position: absolute;

@@ -1,4 +1,4 @@
-const dataUrl = 'https://longocthien.github.io/shopee/shopee.json';
+const dataUrl = 'http://127.0.0.1:5500/shopee.json';
 
 fetch(dataUrl)
     .then((response) => response.json())
@@ -50,7 +50,7 @@ function renderItem(items) {
                     </div>
                     <div class="home-product-item__origin">${item.origin}</div>
                     <div class="home-product-item__favourite">
-                        Yêu thích
+                        ${item.shop}
                     </div>
                     <div class="home-product-item__sale-off">
                         <div class="home-product-item__sale-off-value">${item.saleOff}%</div>
@@ -64,31 +64,25 @@ function renderItem(items) {
     listProduct.innerHTML = htmls.join('');
 }
 
-function checkPageArrow() {
-    var paginationLink = document.querySelectorAll('.pagination-item-link');
 
-    if (document.querySelector('.pagination-item--active a').textContent == 1) {
-        paginationLink[0].classList.add('pagination-item-link--disable');
-        if (paginationLink[0].attributes.href) {
-            paginationLink[0].attributes.removeNamedItem('href');
+function checkPageArrow() {
+    const currentPage = parseInt(
+        document.querySelector('.pagination-item--active a').textContent
+    );
+    const paginationLinks = document.querySelectorAll('.pagination-item-link');
+
+    paginationLinks.forEach((link, index) => {
+        if (index === 0 && currentPage === 1) {
+            link.classList.add('pagination-item-link--disable');
+            link.removeAttribute('href');
+        } else if (index === paginationLinks.length - 1 && currentPage === 8) {
+            link.classList.add('pagination-item-link--disable');
+            link.removeAttribute('href');
+        } else {
+            link.classList.remove('pagination-item-link--disable');
+            link.href = '#!';
         }
-    } else {
-        paginationLink[0].classList.remove('pagination-item-link--disable');
-        if (!paginationLink[0].attributes.href) {
-            paginationLink[0].href = '#!';
-        }
-    }
-    if (document.querySelector('.pagination-item--active a').textContent == 8) {
-        paginationLink[6].classList.add('pagination-item-link--disable');
-        if (paginationLink[6].attributes.href) {
-            paginationLink[6].attributes.removeNamedItem('href');
-        }
-    } else {
-        paginationLink[6].classList.remove('pagination-item-link--disable');
-        if (!paginationLink[6].attributes.href) {
-            paginationLink[6].href = '#!';
-        }
-    }
+    });
 }
 
 function handlePagination() {
@@ -262,7 +256,6 @@ function handlePagination() {
     }
 }
 
-
 // mobile - category - item;
 var mobileCategory = document.querySelectorAll('.mobile-category');
 mobileCategory.forEach(function (item) {
@@ -288,6 +281,8 @@ headerCategoryItem.forEach((item) => {
 // // filter items by category
 
 var mobileCategoryItem = document.querySelectorAll('.category-group-item');
+var checkedValues = [];
+var checkedOrigins = [];
 
 mobileCategoryItem.forEach(function (itemClicked) {
     itemClicked.addEventListener('click', function (e) {
@@ -297,7 +292,33 @@ mobileCategoryItem.forEach(function (itemClicked) {
 
         input.checked = !input.checked;
 
-        shuffer();
+        if (input.checked) {
+            checkedValues.push(input.value);
+        } else {
+            checkedValues = checkedValues.filter(
+                (value) => value !== input.value
+            );
+        }
+
+        fetch(dataUrl)
+            .then((response) => response.json())
+            .then((products) => {
+                let filteredProducts = sortByTypes(products, checkedValues);
+                return filteredProducts;
+            })
+            .then((filteredProducts) => {
+                if (
+                    filteredProducts.some(
+                        (product) => product.type === 'novalue'
+                    )
+                ) {
+                    shuffer();
+                } else if (checkedValues.length > 0) {
+                    renderItem(filteredProducts);
+                } else {
+                    shuffer();
+                }
+            });
     });
 });
 
@@ -315,7 +336,7 @@ ratingStarInput.forEach(function (itemClicked) {
 
         shuffer();
     });
-})
+});
 
 ratingStar.forEach(function (itemClicked) {
     itemClicked.addEventListener('click', function (e) {
@@ -352,7 +373,14 @@ homeFilter.forEach(function (itemClicked) {
         );
         homeFilterActive.classList.remove('btn--primary');
         this.classList.add('btn--primary');
-        shuffer();
+        if (this.textContent.trim() == 'Bán chạy') {
+            fetch(dataUrl)
+                .then((response) => response.json())
+                .then(sortDescendingBySales)
+                .then(renderItem);
+        } else {
+            shuffer();
+        }
     };
 });
 
@@ -365,6 +393,74 @@ applyButton.onclick = function () {
 refreshButton.onclick = function () {
     location.reload();
 };
+
+// sắp xếp theo thứ tự tăng dần hoặc giảm dần
+
+// ============================================================================
+// giá tăng dần
+function sortAscendingByPrice(products) {
+    products.sort(function (a, b) {
+        return (
+            parseInt(a.newPrice.replaceAll('.', '')) -
+            parseInt(b.newPrice.replaceAll('.', ''))
+        );
+    });
+    return products;
+}
+
+// giảm dần
+function sortDescendingByPrice(products) {
+    products.sort(function (a, b) {
+        return (
+            parseInt(b.newPrice.replaceAll('.', '')) -
+            parseInt(a.newPrice.replaceAll('.', ''))
+        );
+    });
+    return products;
+}
+
+// bán chạy
+const sortDescendingBySales = (products) =>
+    products.sort((a, b) => {
+        const aSaled = a.saled.endsWith('k')
+            ? parseInt(a.saled.replaceAll(',', '').replaceAll('k', '')) * 100
+            : parseInt(a.saled.replaceAll(',', ''));
+
+        const bSaled = b.saled.endsWith('k')
+            ? parseInt(b.saled.replaceAll(',', '').replaceAll('k', '')) * 100
+            : parseInt(b.saled.replaceAll(',', ''));
+        return bSaled - aSaled;
+    });
+
+//  theo loại (type)
+
+const sortByTypes = (products, types) => {
+    return products.filter((product) => {
+        var productTypes = types.includes(product.type);
+        var productOrigins = types.includes(product.origin);
+        var productShips = types.includes(product.ship);
+        var productMakers = types.includes(product.maker);
+        var productNoValues = types.includes('noValue');
+        var productShop = types.includes(product.shop);
+
+        return (
+            productTypes +
+            productOrigins +
+            productShips +
+            productMakers +
+            productNoValues +
+            productShop
+        );
+    });
+};
+
+const sortByOrigins = (products, origins) => {
+    return products.filter((product) => origins.includes(product.origin));
+};
+// const sortByOrigins = (products, origin) => {
+//     return products.filter((product) => origin.includes(product.origin));
+// };
+// ============================================================================
 
 // filter theo tăng giá, giảm giá
 var priceParent = document.querySelector('.home-filter-sort');
@@ -381,7 +477,17 @@ priceParent.onmouseenter = function () {
             priceBtn.innerText = e.target.textContent;
             priceBtn.style.color = 'var(--primary-color)';
             priceSortList.classList.remove('home-filter-sort-list--visible');
-            shuffer();
+            if (e.target.textContent.trim() === 'Giá: Thấp đến Cao') {
+                fetch(dataUrl)
+                    .then((response) => response.json())
+                    .then(sortAscendingByPrice)
+                    .then(renderItem);
+            } else {
+                fetch(dataUrl)
+                    .then((response) => response.json())
+                    .then(sortDescendingByPrice)
+                    .then(renderItem);
+            }
         };
     });
 };
@@ -419,4 +525,3 @@ homeFilterPage[1].onclick = function () {
         homeFilterPage[1].classList.add('home-filter-page-btn--disable');
     }
 };
-
