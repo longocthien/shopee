@@ -1,4 +1,4 @@
-const dataUrl = 'http://127.0.0.1:5500/shopee.json';
+const dataUrl = 'https://longocthien.github.io/shopee/shopee.json';
 
 fetch(dataUrl)
     .then((response) => response.json())
@@ -63,7 +63,6 @@ function renderItem(items) {
     });
     listProduct.innerHTML = htmls.join('');
 }
-
 
 function checkPageArrow() {
     const currentPage = parseInt(
@@ -257,10 +256,21 @@ function handlePagination() {
 }
 
 // mobile - category - item;
-var mobileCategory = document.querySelectorAll('.mobile-category');
+var mobileCategory = document.querySelectorAll('.mobile-category-item');
 mobileCategory.forEach(function (item) {
     item.onclick = function () {
-        shuffer();
+        var value = item.getAttribute('value');
+        fetch(dataUrl)
+            .then((response) => response.json())
+            .then((products) => {
+                const sortedByMaker = sortByMaker(value)(products);
+                const sortedByType = sortByType(value)(products);
+                return [sortedByMaker, sortedByType];
+            })
+            .then((sortedProducts) => {
+                const mergedProducts = sortedProducts.flat(); // gộp hai kết quả trả về thành một mảng duy nhất
+                renderItem(mergedProducts); // render dữ liệu đã được sắp xếp
+            });
     };
 });
 // category
@@ -274,17 +284,29 @@ headerCategoryItem.forEach((item) => {
         );
         headerCategoryActive.classList.remove('header__sort-item--active');
         this.classList.add('header__sort-item--active');
-        shuffer();
+        if (this.textContent.trim() == 'Bán chạy') {
+            fetch(dataUrl)
+                .then((response) => response.json())
+                .then(sortDescendingBySales)
+                .then(renderItem);
+        } else if (this.textContent.trim() == 'Giá') {
+            fetch(dataUrl)
+                .then((response) => response.json())
+                .then(sortAscendingByPrice)
+                .then(renderItem);
+        } else {
+            shuffer();
+        }
     };
 });
 
 // // filter items by category
 
-var mobileCategoryItem = document.querySelectorAll('.category-group-item');
-var checkedValues = [];
-var checkedOrigins = [];
+var PcCategoryItem = document.querySelectorAll('.category-group-item');
 
-mobileCategoryItem.forEach(function (itemClicked) {
+var checkedValues = [];
+
+PcCategoryItem.forEach(function (itemClicked) {
     itemClicked.addEventListener('click', function (e) {
         var input = e.target
             .closest('.category-group-item')
@@ -294,10 +316,12 @@ mobileCategoryItem.forEach(function (itemClicked) {
 
         if (input.checked) {
             checkedValues.push(input.value);
+            console.log(checkedValues);
         } else {
             checkedValues = checkedValues.filter(
                 (value) => value !== input.value
             );
+            console.log(checkedValues);
         }
 
         fetch(dataUrl)
@@ -308,15 +332,14 @@ mobileCategoryItem.forEach(function (itemClicked) {
             })
             .then((filteredProducts) => {
                 if (
+                    checkedValues.length === 0 ||
                     filteredProducts.some(
                         (product) => product.type === 'novalue'
                     )
                 ) {
                     shuffer();
-                } else if (checkedValues.length > 0) {
-                    renderItem(filteredProducts);
                 } else {
-                    shuffer();
+                    renderItem(filteredProducts);
                 }
             });
     });
@@ -433,7 +456,13 @@ const sortDescendingBySales = (products) =>
     });
 
 //  theo loại (type)
+// ========Đơn========
+const sortByMaker = (maker) => (products) =>
+    products.filter((product) => product.maker === maker);
 
+const sortByType = (type) => (products) =>
+    products.filter((product) => product.type === type);
+// ========Cộng dồn========
 const sortByTypes = (products, types) => {
     return products.filter((product) => {
         var productTypes = types.includes(product.type);
@@ -454,12 +483,6 @@ const sortByTypes = (products, types) => {
     });
 };
 
-const sortByOrigins = (products, origins) => {
-    return products.filter((product) => origins.includes(product.origin));
-};
-// const sortByOrigins = (products, origin) => {
-//     return products.filter((product) => origin.includes(product.origin));
-// };
 // ============================================================================
 
 // filter theo tăng giá, giảm giá
